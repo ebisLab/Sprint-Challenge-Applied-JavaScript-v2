@@ -21,10 +21,19 @@ axios.get('https://lambda-times-backend.herokuapp.com/topics')
     });
 })
 
+.catch(error => {
+    console.log('Something is down, idk', error)
+  })
+
 function createTabs(obj){
     const tab = document.createElement('div');
     tab.classList.add('tab');
     tab.textContent = obj
 
+
+    tab.addEventListener('click', function(){
+        console.log('why meeee!')
+    })
     return tab;
+
 }

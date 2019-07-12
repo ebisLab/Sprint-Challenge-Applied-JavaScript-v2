@@ -20,9 +20,7 @@
 
 const cards= document.querySelector('.cards-container');
 
-const promise = axios.get('https://lambda-times-backend.herokuapp.com/articles')
-
-promise
+axios.get('https://lambda-times-backend.herokuapp.com/articles')
 .then(data => {
     console.log('card data', data)
     const articles = data.data.articles;
@@ -38,15 +36,12 @@ promise
         })
     })
 
-    // articles.forEach(element => {
-    //     const art = createCards(element)
-
-    //     cards.appendChild(art)
-    // });
-
-    
-    // createCards()
+  
 })
+
+.catch(error => {
+    console.log('Something is down, idk', error)
+  })
 
 function createCards(obj){
 
@@ -68,9 +63,10 @@ function createCards(obj){
     author.classList.add('author');
     imgcontainer.classList.add('img-container');
 
-    headline.textContent = '{HeadLine of Article}';
-    img.textContent = 'google.com';
-    aname.textContent = `By: `
+    headline.textContent = obj.headline;
+    img.src = obj.authorPhoto;
+    aname.textContent = `By: ${obj.authorName}`
+
     
 
     console.log('Hello')

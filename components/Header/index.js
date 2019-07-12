@@ -15,7 +15,19 @@ const headerContainer = document.querySelector('.header-container');
 
 
 
+//const key = '3e4ffa05eddf99b9f30923de5aee44ff';
+//const key = f56d319c4b0c0a6b7c6481016aefb54b;
+const promise = axios.get(`http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=f56d319c4b0c0a6b7c6481016aefb54b>`)
+// https://api.darksky.net/forecast/0123456789abcdef9876543210fedcba/,')
 
+promise
+.then(data => {
+    console.log('weater', data)
+})
+
+.catch(error => {
+    console.log('Something is down, idk', error)
+  })
 
 headerContainer.appendChild(Header())
 
@@ -26,6 +38,7 @@ function Header() {
     const span = document.createElement('span');
     const h1= document.createElement('h1');
     const tempspan= document.createElement('span');
+    
 
 
 
@@ -40,6 +53,14 @@ function Header() {
     span.textContent = 'Some Date';
     h1.textContent = 'Lambda Times';
     tempspan.textContent = '98'
+
+    let d = new Date();
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"].map(item=> item.toUpperCase());
+let m = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"].map(item=> item.toUpperCase());
+
+span.textContent = `${days[d.getDay()]} ${m[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+
+    
 
     
     return header;
