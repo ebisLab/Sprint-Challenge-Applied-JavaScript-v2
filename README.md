@@ -40,22 +40,22 @@ Edit this document to include your answers after each question. Make sure to lea
 
 ### Git Set up
 
-* [ ] Fork the project into your GitHub user account
-* [ ] Clone the forked project into a directory on your machine
-* [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
-* [ ] You are now ready to build this project with your preferred IDE
+* :white_check_mark: Fork the project into your GitHub user account
+* :white_check_mark: Clone the forked project into a directory on your machine
+* :white_check_mark: Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
+* :white_check_mark: You are now ready to build this project with your preferred IDE
 
 ## Minimum Viable Product
 
 Your finished project must include all of the following requirements:
 
-* [ ] Look through the HTML code and familiarize yourself with the different sections. Some of them already exist, but some need to be filled it. DO NOT add any code to the HTML file itself.
+* :white_check_mark: Look through the HTML code and familiarize yourself with the different sections. Some of them already exist, but some need to be filled it. DO NOT add any code to the HTML file itself.
 
-* [ ] Following the instructions in the `Header/index.js` file, create the Header component. 
+* :white_check_mark: Following the instructions in the `Header/index.js` file, create the Header component. 
 
-* [ ] Following the instructions in the `Tabs/index.js` file, create individual Tabs components.
+* :white_check_mark: Following the instructions in the `Tabs/index.js` file, create individual Tabs components.
 
-* [ ] Following the instructions in the `Cards/index.js` file, create individual Cards components.
+* :white_check_mark: Following the instructions in the `Cards/index.js` file, create individual Cards components.
 
 ## Stretch Problems
 
